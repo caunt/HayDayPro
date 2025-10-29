@@ -1,4 +1,4 @@
-namespace HayDayPro;
+namespace HayDayPro.Items;
 
 public record ItemStack(Item Item, int Count)
 {

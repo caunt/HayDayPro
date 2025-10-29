@@ -1,9 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using HayDayPro;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
+using HayDayPro.Items;
+using HayDayPro.Sources;
 
 Console.OutputEncoding = Encoding.UTF8;
 Console.WriteLine("Hello, World!");

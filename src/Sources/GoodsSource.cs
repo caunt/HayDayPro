@@ -1,6 +1,7 @@
-﻿using HtmlAgilityPack;
+﻿using HayDayPro.Items;
+using HtmlAgilityPack;
 
-namespace HayDayPro;
+namespace HayDayPro.Sources;
 
 public static class GoodsSource
 {

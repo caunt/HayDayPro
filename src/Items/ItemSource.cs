@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 
-namespace HayDayPro;
+namespace HayDayPro.Items;
 
 public class ItemSource
 {
