@@ -19,10 +19,8 @@ var jsonSerializerOptions = new JsonSerializerOptions
 // Console.WriteLine(JsonSerializer.Serialize(value, jsonSerializerOptions));
 
 var account = new Account(33);
-var profitPerHourSelector = new ItemPropertySelector(item => item.SelfMadeProfitPerHour, account.GetFactor, "c/h");
-
 Console.WriteLine($"Level {account.Level}");
-PrintBestBy(account, profitPerHourSelector);
+PrintBestBy(account, account.CreatePropertySelector(item => item.SelfMadeProfitPerHour, "c/h"));
 
 return;
 

@@ -46,9 +46,9 @@ public record Account(int Level)
         _ => 3
     };
     
-    public int GetFactor(Item item)
+    public ItemPropertySelector CreatePropertySelector(Func<Item, int> property, string description)
     {
-        return item switch
+        return new ItemPropertySelector(property, item => item switch
         {
             { Source.Name: "Field" } => CountFields,
             { Name: "Egg" } => CountChickens,
@@ -56,9 +56,9 @@ public record Account(int Level)
             { Name: "Bacon" } => CountPigs,
             { Name: "Goat milk" } => CountGoats,
             _ => 1
-        };
+        }, description);
     }
-
+    
     public IOrderedEnumerable<IGrouping<ItemSource, Item>> BestBy(ItemPropertySelector selector)
     {
         return AvailableGoods
