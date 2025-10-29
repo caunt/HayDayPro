@@ -96,6 +96,8 @@ public class Item
         {
             "Lure" => "Red lure",
             "Eggs" => "Egg",
+            "Lobster" => "Lobster trap",
+            "Duck" => "Duck trap",
             "Supplies" or "Diamond" or "N/A" or "any available" or "or Fishing net" => string.Empty,
             _ when name.EndsWith("voucher") => string.Empty,
             _ => name
