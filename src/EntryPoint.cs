@@ -4,8 +4,11 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using HayDayPro;
+using HayDayPro.Extensions;
 using HayDayPro.Items;
 using HayDayPro.Sources;
+
+var path = "/Users/caunt/Downloads/libg.so";
 
 Console.OutputEncoding = Encoding.UTF8;
 Console.WriteLine("Hello, World!");
@@ -18,7 +21,7 @@ var jsonSerializerOptions = new JsonSerializerOptions
 
 // Console.WriteLine(JsonSerializer.Serialize(value, jsonSerializerOptions));
 
-var account = new Account(33);
+var account = new Account(40);
 Console.WriteLine($"Level {account.Level}");
 PrintBestBy(account, account.CreatePropertySelector(item => item.SelfMadeProfitPerHour, "c/h"));
 
